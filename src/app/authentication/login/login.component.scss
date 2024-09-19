@@ -1,0 +1,98 @@
+/* Contenedor principal */
+.container {
+  background: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del formulario */
+.login-container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem; /* Ajuste de padding para mejor separación interna */
+  text-align: center; /* Centrado del texto */
+}
+
+/* Título del formulario */
+.login-container h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+/* Ajustes para centrar los elementos del formulario */
+.form-group {
+  text-align: left; /* Alinear los labels a la izquierda */
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333333;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs centrados y con ancho ajustado */
+.form-control {
+  width: 100%; /* Asegurar que ocupen todo el ancho del contenedor */
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  padding: 0.75rem 1.25rem;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Mensajes de error */
+.text-danger {
+  color: #dc3545;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+/* Botón de submit centrado y con ancho completo */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+/* Estilos para los enlaces */
+.forgot-password a,
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password a:hover,
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Separación adicional para los enlaces */
+.forgot-password,
+.signup-link {
+  margin-top: 1rem;
+}
