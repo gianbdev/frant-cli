@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { AuthGuard } from './shared/gaurd/auth.guard';
 
 const routes: Routes = [
-  /*
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+
   {
     path: '',
     loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
-  },*/
+  },
   {
     path: '',
     loadChildren: () =>
@@ -18,12 +21,18 @@ const routes: Routes = [
   },
   /*
   {
-    path: 'error',
-    loadChildren: () =>
-      import('./error/error.module').then((m) => m.ErrorModule),
+    path: '**',
+    redirectTo: 'error/error404',
+    pathMatch: 'full',
+  },*/
+  {
+    path: '**',
+    redirectTo: 'login', // Redirige cualquier otra ruta no definida a login
   },
-  { path: '**', redirectTo: 'error/error404', pathMatch: 'full' },
-   */
 ];
-@NgModule({ imports: [RouterModule.forRoot(routes)], exports: [RouterModule] })
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
 export class AppRoutingModule {}
